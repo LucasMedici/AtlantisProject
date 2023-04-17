@@ -1,5 +1,6 @@
 import Cliente from "../modelos/cliente";
 import Endereco from "../modelos/endereco";
+import Telefone from "../modelos/telefone";
 
 
 let cliente = new Cliente()
@@ -15,6 +16,10 @@ endereco.estado = `Rio de Janeiro`
 endereco.pais = `Brasil`
 endereco.codigoPostal = `22220-000`
 cliente.endereco = endereco
+let telefone = new Telefone()
+telefone.ddd = '11'
+telefone.numero = '989593219'
+cliente.telefones.push(telefone)
 
 let dependente = new Cliente()
 dependente.nome = `Isabel Cristina Leopoldina Augusta Micaela`
@@ -22,12 +27,14 @@ dependente.nomeSocial = `Princesa Isabel`
 dependente.dataCadastro = new Date(1921, 10, 14)
 dependente.dataNascimento = new Date(1846, 6, 29)
 dependente.endereco = (cliente.endereco.clonar() as Endereco)
+// dependente.telefones = (cliente.telefones[0].clonar() as Telefone)
+dependente.telefones = (cliente.telefones)
 dependente.titular = cliente
 cliente.dependentes.push(dependente)
 
 
 
-
+console.log(dependente)
 
 console.log('### BEM VINDO AO CADASTRO ATLANTIS ###')
 
