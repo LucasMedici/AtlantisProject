@@ -1,6 +1,6 @@
 # Atlantis Project
 
-<h2> 📑 Lista  </h2>
+<h2> 📑 Listas  </h2>
 
  - Lista 1: [Primeira lista](https://github.com/LucasMedici/AtlantisProject/tree/lista_01); <br>
  - Lista 2: [Segunda lista](); <br> 
