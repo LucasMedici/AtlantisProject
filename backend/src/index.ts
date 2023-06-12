@@ -1,4 +1,5 @@
 import express, { json } from "express";
+import {router} from "./routes"
 
 import db from "./database/config";
 import cors from 'cors';
@@ -11,12 +12,13 @@ app.use(cors({
   origin: "*"
 }))
 app.use(json());
+app.use(router)
 
 
 
 
 
-app.listen(async () => {
+app.listen(3000, async () => {
   await db.sync();
   console.log(`App running!`);
 });
