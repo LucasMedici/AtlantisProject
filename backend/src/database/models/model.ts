@@ -24,7 +24,7 @@ export const ClienteModel = db.define("clientes", {
 
 
 export const DependenteModel = db.define("dependentes", {
-    id_do_dependente: {
+    id: {
         type: DataTypes.INTEGER.UNSIGNED,
         autoIncrement: true,
         primaryKey: true,
