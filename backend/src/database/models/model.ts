@@ -16,7 +16,7 @@ export const ClienteModel = db.define("clientes", {
         type: DataTypes.STRING
     },  
     cpf: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: false,
         unique: true,
     },
