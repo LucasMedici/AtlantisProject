@@ -18,7 +18,7 @@ app.use(router)
 
 
 
-app.listen(3000, async () => {
+app.listen(7070, async () => {
   await db.sync();
   console.log(`App running!`);
 });
