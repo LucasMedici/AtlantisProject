@@ -52,7 +52,6 @@ export const AcomodacoesModel = db.define("acomodacoes", {
     },
     nome_acomodaçao: {
         type: DataTypes.STRING,
-        allowNull: false,
     },
     cama_solteiro: {
         type: DataTypes.INTEGER
