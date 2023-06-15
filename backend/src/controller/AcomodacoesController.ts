@@ -16,3 +16,13 @@ export const getAllAcomodacoes: RequestHandler = async (req, res) => {
         return res.status(400).json({message: "Falha ao carregar Acomodações!"})
     }
 }
+
+
+export const createPadraoAcomodacao: RequestHandler = async (req, res) => {
+    try{
+        const acomod = await AcomodacoesModel.create({...req.body},)
+         return res.status(200).json({message: "Acomodação registrada com sucesso! ", data:acomod})
+    } catch {
+        return res.status(400).json({message: "Erro ao registrar acomodação!"})
+    }
+}
